@@ -15,11 +15,11 @@
           <a href="index.html">Black Sea Pizza</a>
       </div>
       <div>
-          <a href="ourlocation.html">our location</a>
-          <a href="contactUs.html">contact us</a>
+          <a href="ourlocation.html">Our location</a>
+          <a href="contactUs.html">Contact us</a>
       </div>
   </nav>
-    <form action="sendData">
+    <form >
 
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -32,12 +32,14 @@
           <option value="australia">Australia</option>
           <option value="canada">Canada</option>
           <option value="usa">USA</option>
+          <option value="usa">Bulgaria</option>
+          <option value="usa">Georgia</option>
         </select>
     
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
     
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" onclick="orderPizza()">
     
       </form>
 
@@ -46,6 +48,11 @@
 
 
 <script>
+
+function orderPizza(){
+  console.log('this worked')
+  alert("we have recieved your order")
+}
 
 </script>
 

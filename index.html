@@ -45,15 +45,15 @@
 
         } else if(elementId){
 
-            console.log(elementId, "element id before pizza")
+            
             data.pizzas.filter((pizza) => {
                 if(pizza.id == elementId){
                     template += `
-                    <div class="card" >
+                    <div class="card">
                         <div class="container" id="${pizza.id}" onClick="getDetails(this.id)">
                                 <h2>${pizza.name}</h2>
                                 <p>${pizza.ingridients}<p>
-                                <p>${pizza.text}<p>
+                                <p onClick='changecolor()'>${pizza.text}<p>
                             </div>
                         </div>
                     `
@@ -70,6 +70,10 @@
     function getDetails(id){
         elementId = id
         getPizzas()
+    }
+    function changecolor(){
+        console.log('color changed')
+        document.body.style.backgroundColor = "lightgray"
     }
 
                 
